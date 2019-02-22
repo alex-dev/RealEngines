@@ -20,34 +20,32 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{A79CC0FA-2E50-4017-A12C-6FC15604653B}</ProjectGuid>
-    <Keyword>Win32Proj</Keyword>
-    <RootNamespace>quantities</RootNamespace>
+    <ProjectGuid>{D618D9EC-0E8B-4AFB-A5A2-A33134A438B9}</ProjectGuid>
+    <RootNamespace>properties</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
-    <ProjectName>Quantities</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -216,48 +214,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="base\advanced_augmented_assignment.ipp" />
-    <ClInclude Include="base\augmented_assignment.hpp" />
-    <ClInclude Include="base\simple_augmented_assignment.ipp" />
-    <ClInclude Include="numerics\constants.hpp" />
-    <ClInclude Include="numerics\cubic_root.hpp" />
-    <ClInclude Include="numerics.hpp" />
-    <ClInclude Include="numerics\power.hpp" />
-    <ClInclude Include="numerics\power.ipp" />
-    <ClInclude Include="numerics\square_root.hpp" />
-    <ClInclude Include="quantities\dimensions\dimensions.hpp" />
-    <ClInclude Include="quantities\dimensions\traits.hpp" />
-    <ClInclude Include="base\not_constructible.hpp" />
-    <ClInclude Include="quantities\math.hpp" />
-    <ClInclude Include="quantities.hpp" />
-    <ClInclude Include="quantities\named_quantities.hpp" />
-    <ClInclude Include="quantities\quantities\elementary_functions.ipp" />
-    <ClInclude Include="quantities\operations.hpp" />
-    <ClInclude Include="quantities\quantities\complex_arithmetic_operators.ipp" />
-    <ClInclude Include="quantities\quantities\boolean_operators.ipp" />
-    <ClInclude Include="quantities\quantities\generators.hpp" />
-    <ClInclude Include="quantities\quantities\quantity.hpp" />
-    <ClInclude Include="quantities\quantities\quantity.ipp" />
-    <ClInclude Include="quantities\quantities\traits.hpp" />
-    <ClInclude Include="quantities\quantities\simple_arithmetic_operators.ipp" />
-    <ClInclude Include="quantities\quantities\trigonometric_functions.ipp" />
-    <ClInclude Include="quantities\units.hpp" />
-    <ClInclude Include="quantities\units\bipm.hpp" />
-    <ClInclude Include="quantities\units\prefixes.hpp" />
-    <ClInclude Include="quantities\units\prefixes.ipp" />
-    <ClInclude Include="quantities\units\si.hpp" />
-    <ClInclude Include="quantities\units\uk.hpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="numerics\cubic_root.cpp" />
-    <ClCompile Include="numerics\square_root.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include=".clang-format" />
-    <None Include="quantities\dimensions\generators_dimensions.hpp" />
-    <None Include="quantities\units\astronomy.hpp" />
-    <None Include="quantities\units\cgs.hpp" />
-    <None Include="quantities\units\constants.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

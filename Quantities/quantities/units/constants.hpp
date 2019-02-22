@@ -9,6 +9,7 @@ namespace quantities {
     constexpr Charge ElementaryCharge = 1.602'176'634e-19 * Coulomb;
     constexpr Entropy BoltzmannConstant = 1.380'649e-23 * (Joule / Kelvin);
     constexpr Inverse<Amount> AvogadroConstant = 6.022'140'76e23 * (1 / Mole);
+    constexpr Quotient<Entropy, Mass> GasConstant = BoltzmannConstant * AvogadroConstant;
 
     // We use the 2014 CODATA recommended values.  We do not support uncertainties.
     constexpr double FineStructureConstant = 7.297'352'5664e-3;
