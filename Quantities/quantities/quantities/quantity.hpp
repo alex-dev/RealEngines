@@ -17,16 +17,16 @@ namespace quantities {
       typedef Dimensions Dimensions;
 
     public:
-      static constexpr Quantity infinity();
-      static constexpr Quantity NaN();
+      static constexpr Quantity infinity() noexcept;
+      static constexpr Quantity NaN() noexcept;
 
-      constexpr Quantity();
+      constexpr Quantity() noexcept;
 
     protected:
       double value;
 
     private:
-      constexpr Quantity(double value);
+      constexpr Quantity(double value) noexcept;
 
 #pragma region Friend Declarations
 
