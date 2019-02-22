@@ -1,12 +1,12 @@
 namespace properties {
   template<typename T, typename Child>
   constexpr AbstractReadOnlyProperty<T, Child>::operator T const &() const {
-    return static_cast<Child *>(this)();
+    return static_cast<Child *>(this)->get();
   }
 
   template<typename T, typename Child>
   constexpr AbstractReadOnlyProperty<T, Child>::operator T &() {
-    return static_cast<Child *>(this)();
+    return static_cast<Child *>(this)->get();
   }
 
   template<typename T, typename Child>
