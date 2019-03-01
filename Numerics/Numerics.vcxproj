@@ -222,6 +222,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="numerics.hpp" />
+    <ClInclude Include="numerics\constants.hpp" />
+    <ClInclude Include="numerics\cubic_root.hpp" />
+    <ClInclude Include="numerics\power.hpp" />
+    <ClInclude Include="numerics\power.ipp" />
+    <ClInclude Include="numerics\square_root.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="numerics\cubic_root.cpp" />
+    <ClCompile Include="numerics\square_root.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".clang-format" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />

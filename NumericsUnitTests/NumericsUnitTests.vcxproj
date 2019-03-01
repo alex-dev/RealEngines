@@ -20,37 +20,41 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{A79CC0FA-2E50-4017-A12C-6FC15604653B}</ProjectGuid>
-    <RootNamespace>quantities</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
-    <ProjectName>Quantities</ProjectName>
+    <ProjectGuid>{2FE609B0-9C4F-4E7B-8B46-1444B8979110}</ProjectGuid>
+    <RootNamespace>tests::numerics</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <ProjectSubType>NativeUnitTestProject</ProjectSubType>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -104,36 +108,6 @@
       <WarningLevel>Level4</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpplatest</LanguageStandard>
-      <EnableModules>false</EnableModules>
-      <EnableParallelCodeGeneration>false</EnableParallelCodeGeneration>
-      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
-      <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <CallingConvention>Cdecl</CallingConvention>
-      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
-      <TreatWarningAsError>true</TreatWarningAsError>
-      <AdditionalOptions>/wd4624 %(AdditionalOptions)</AdditionalOptions>
-      <IntrinsicFunctions>false</IntrinsicFunctions>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <SmallerTypeCheck>false</SmallerTypeCheck>
-      <FloatingPointExceptions>false</FloatingPointExceptions>
-      <DisableLanguageExtensions>false</DisableLanguageExtensions>
-      <FloatingPointModel>Fast</FloatingPointModel>
-      <EnforceTypeConversionRules>true</EnforceTypeConversionRules>
-    </ClCompile>
-    <Link>
-      <SubSystem>Windows</SubSystem>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <WarningLevel>Level4</WarningLevel>
-      <Optimization>Disabled</Optimization>
-      <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
@@ -152,10 +126,44 @@
       <DisableLanguageExtensions>false</DisableLanguageExtensions>
       <FloatingPointModel>Fast</FloatingPointModel>
       <EnforceTypeConversionRules>true</EnforceTypeConversionRules>
+      <AdditionalIncludeDirectories>$(VCInstallDir)UnitTest\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(VCInstallDir)UnitTest\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <EnableModules>false</EnableModules>
+      <EnableParallelCodeGeneration>false</EnableParallelCodeGeneration>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <CallingConvention>Cdecl</CallingConvention>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <AdditionalOptions>/wd4624 %(AdditionalOptions)</AdditionalOptions>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <SmallerTypeCheck>false</SmallerTypeCheck>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <DisableLanguageExtensions>false</DisableLanguageExtensions>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnforceTypeConversionRules>true</EnforceTypeConversionRules>
+      <AdditionalIncludeDirectories>$(VCInstallDir)UnitTest\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(VCInstallDir)UnitTest\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -182,12 +190,14 @@
       <DisableLanguageExtensions>false</DisableLanguageExtensions>
       <FloatingPointModel>Fast</FloatingPointModel>
       <EnforceTypeConversionRules>true</EnforceTypeConversionRules>
+      <AdditionalIncludeDirectories>$(VCInstallDir)UnitTest\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(VCInstallDir)UnitTest\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -214,48 +224,20 @@
       <DisableLanguageExtensions>false</DisableLanguageExtensions>
       <FloatingPointModel>Fast</FloatingPointModel>
       <EnforceTypeConversionRules>true</EnforceTypeConversionRules>
+      <AdditionalIncludeDirectories>$(VCInstallDir)UnitTest\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(VCInstallDir)UnitTest\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="base\advanced_augmented_assignment.ipp" />
-    <ClInclude Include="base\augmented_assignment.hpp" />
-	<ClInclude Include="base\not_constructible.hpp" />
-    <ClInclude Include="base\simple_augmented_assignment.ipp" />
-    <ClInclude Include="quantities\dimensions\generators_dimensions.hpp" />
-    <ClInclude Include="quantities\dimensions\dimensions.hpp" />
-    <ClInclude Include="quantities\dimensions\traits.hpp" />
-	<ClInclude Include="quantities.hpp" />
-    <ClInclude Include="quantities\math.hpp" />
-    <ClInclude Include="quantities\named_quantities.hpp" />
-    <ClInclude Include="quantities\quantities\elementary_functions.ipp" />
-    <ClInclude Include="quantities\operations.hpp" />
-    <ClInclude Include="quantities\quantities\complex_arithmetic_operators.ipp" />
-    <ClInclude Include="quantities\quantities\boolean_operators.ipp" />
-    <ClInclude Include="quantities\quantities\generators.hpp" />
-    <ClInclude Include="quantities\quantities\quantity.hpp" />
-    <ClInclude Include="quantities\quantities\quantity.ipp" />
-    <ClInclude Include="quantities\quantities\traits.hpp" />
-    <ClInclude Include="quantities\quantities\simple_arithmetic_operators.ipp" />
-    <ClInclude Include="quantities\quantities\trigonometric_functions.ipp" />
-    <ClInclude Include="quantities\units.hpp" />
-    <ClInclude Include="quantities\units\astronomy.hpp" />
-    <ClInclude Include="quantities\units\bipm.hpp" />
-	<ClInclude Include="quantities\units\cgs.hpp" />
-    <ClInclude Include="quantities\units\constants.hpp" />
-    <ClInclude Include="quantities\units\prefixes.hpp" />
-    <ClInclude Include="quantities\units\prefixes.ipp" />
-    <ClInclude Include="quantities\units\si.hpp" />
-    <ClInclude Include="quantities\units\uk.hpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include=".clang-format" />
+    <ClCompile Include="unittest1.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
-  <ImportGroup Label="ExtensionTargets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
 </Project>

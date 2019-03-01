@@ -4,13 +4,24 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Quantities", "Quantities\Quantities.vcxproj", "{A79CC0FA-2E50-4017-A12C-6FC15604653B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{52F7CDF3-DAB1-464A-8F13-51FBDB7D3414} = {52F7CDF3-DAB1-464A-8F13-51FBDB7D3414}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Solver", "Solver\Solver.vcxproj", "{07A34DAB-078B-4E30-A365-32D2DB07AD3C}"
 	ProjectSection(ProjectDependencies) = postProject
 		{D618D9EC-0E8B-4AFB-A5A2-A33134A438B9} = {D618D9EC-0E8B-4AFB-A5A2-A33134A438B9}
+		{52F7CDF3-DAB1-464A-8F13-51FBDB7D3414} = {52F7CDF3-DAB1-464A-8F13-51FBDB7D3414}
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Properties", "Properties\Properties.vcxproj", "{D618D9EC-0E8B-4AFB-A5A2-A33134A438B9}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Numerics", "Numerics\Numerics.vcxproj", "{52F7CDF3-DAB1-464A-8F13-51FBDB7D3414}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NumericsUnitTests", "NumericsUnitTests\NumericsUnitTests.vcxproj", "{2FE609B0-9C4F-4E7B-8B46-1444B8979110}"
+	ProjectSection(ProjectDependencies) = postProject
+		{52F7CDF3-DAB1-464A-8F13-51FBDB7D3414} = {52F7CDF3-DAB1-464A-8F13-51FBDB7D3414}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -52,6 +63,26 @@ Global
 		{D618D9EC-0E8B-4AFB-A5A2-A33134A438B9}.Release|x64.Build.0 = Release|x64
 		{D618D9EC-0E8B-4AFB-A5A2-A33134A438B9}.Release|x86.ActiveCfg = Release|Win32
 		{D618D9EC-0E8B-4AFB-A5A2-A33134A438B9}.Release|x86.Build.0 = Release|Win32
+		{52F7CDF3-DAB1-464A-8F13-51FBDB7D3414}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{52F7CDF3-DAB1-464A-8F13-51FBDB7D3414}.Debug|x64.ActiveCfg = Debug|x64
+		{52F7CDF3-DAB1-464A-8F13-51FBDB7D3414}.Debug|x64.Build.0 = Debug|x64
+		{52F7CDF3-DAB1-464A-8F13-51FBDB7D3414}.Debug|x86.ActiveCfg = Debug|Win32
+		{52F7CDF3-DAB1-464A-8F13-51FBDB7D3414}.Debug|x86.Build.0 = Debug|Win32
+		{52F7CDF3-DAB1-464A-8F13-51FBDB7D3414}.Release|Any CPU.ActiveCfg = Release|Win32
+		{52F7CDF3-DAB1-464A-8F13-51FBDB7D3414}.Release|x64.ActiveCfg = Release|x64
+		{52F7CDF3-DAB1-464A-8F13-51FBDB7D3414}.Release|x64.Build.0 = Release|x64
+		{52F7CDF3-DAB1-464A-8F13-51FBDB7D3414}.Release|x86.ActiveCfg = Release|Win32
+		{52F7CDF3-DAB1-464A-8F13-51FBDB7D3414}.Release|x86.Build.0 = Release|Win32
+		{2FE609B0-9C4F-4E7B-8B46-1444B8979110}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{2FE609B0-9C4F-4E7B-8B46-1444B8979110}.Debug|x64.ActiveCfg = Debug|x64
+		{2FE609B0-9C4F-4E7B-8B46-1444B8979110}.Debug|x64.Build.0 = Debug|x64
+		{2FE609B0-9C4F-4E7B-8B46-1444B8979110}.Debug|x86.ActiveCfg = Debug|Win32
+		{2FE609B0-9C4F-4E7B-8B46-1444B8979110}.Debug|x86.Build.0 = Debug|Win32
+		{2FE609B0-9C4F-4E7B-8B46-1444B8979110}.Release|Any CPU.ActiveCfg = Release|Win32
+		{2FE609B0-9C4F-4E7B-8B46-1444B8979110}.Release|x64.ActiveCfg = Release|x64
+		{2FE609B0-9C4F-4E7B-8B46-1444B8979110}.Release|x64.Build.0 = Release|x64
+		{2FE609B0-9C4F-4E7B-8B46-1444B8979110}.Release|x86.ActiveCfg = Release|Win32
+		{2FE609B0-9C4F-4E7B-8B46-1444B8979110}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
