@@ -21,15 +21,15 @@ IncludeBlocks: Merge
 IncludeCategories:
   - Regex: '\.h>$'
     Priority: 1
-  - Regex: 'c.*>$'
-    Priority: 2
-  - Regex: '.*stream>$'
-    Priority: 3
-  - Regex: '^(<|"(gtest|gmock|isl|json)/)'
-    Priority: 4
   - Regex: '\.hpp>$'
     Priority: 5
-  - Regex: '"$'
+  - Regex: '^<c'
+    Priority: 2
+  - Regex: '^(<|"(gtest|gmock|isl|json)/)'
+    Priority: 4
+  - Regex: '^<'
+    Priority: 3
+  - Regex: '^"'
     Priority: 6
 IndentPPDirectives: None
 IndentWidth: 2
@@ -37,7 +37,7 @@ IndentWrappedFunctionNames: true
 KeepEmptyLinesAtTheStartOfBlocks: false
 MaxEmptyLinesToKeep: 1
 NamespaceIndentation: All
-PointerAlignment: Middle
+PointerAlignment: Left
 ReflowComments: true
 SortIncludes: true
 SortUsingDeclarations: true

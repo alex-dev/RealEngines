@@ -1,48 +1,80 @@
 ﻿#pragma once
 #include <memory>
-#include <quantities.hpp>
-#include <string>
+#include <default_readwrite_property.hpp>
+#include <properties.hpp>
 #include "thermodynamics/molecular_gas.hpp"
+#include "thermodynamics/quantities.hpp"
 
 namespace solver {
   namespace thermodynamics {
     class Gas {
     public:
-      constexpr Gas(std::shared_ptr<MolecularGas> && gas, quantities::Amount && n, quantities::Mass && m);
+      constexpr Gas(std::shared_ptr<MolecularGas>&& gas, Amount n, Mass m);
 
+    private:
+      std::shared_ptr<MolecularGas> const gas;
+
+    public:
       /// <summary>Quantity in mole.</summary>
-      quantities::Amount n;
+      properties::DefaultReadWriteProperty<Amount> n;
 
       /// <summary>Mass.</summary>
-      quantities::Mass m;
+      properties::DefaultReadWriteProperty<Mass> m;
 
 #pragma region MolecularGas accessors
 
-      constexpr std::string const & name() const;
+      struct Name : properties::ReadOnlyProperty<double, Name>, properties::ReferencingProperty<MolecularGas> {
+        using properties::ReferencingProperty<MolecularGas>::ReferencingProperty;
 
-      /// <summary>Isentropic expansion factor or specific heat ratio.</summary>
-      constexpr double const & γ() const;
+      protected:
+        constexpr std::string const& get() const;
+      } const name{*gas};
 
-      /// <summary>Isobaric heat capacity.</summary>
-      constexpr quantities::Entropy const & Cp() const;
+      struct γ : properties::ReadOnlyProperty<double, γ>, properties::ReferencingProperty<MolecularGas> {
+        using properties::ReferencingProperty<MolecularGas>::ReferencingProperty;
 
-      /// <summary>Isochoric heat capacity.</summary>
-      constexpr quantities::Entropy const & Cv() const;
+      protected:
+        constexpr double const& get() const;
+      } const γ{*gas};
 
-      /// <summary>Specific gas constant.</summary>
-      constexpr SpecificGasConstant const & R() const;
+      struct Cp : properties::ReadOnlyProperty<Entropy, Cp>, properties::ReferencingProperty<MolecularGas> {
+        using properties::ReferencingProperty<MolecularGas>::ReferencingProperty;
 
-      /// <summary>Molar mass.</summary>
-      constexpr quantities::MolarMass const & M() const;
+      protected:
+        constexpr Entropy const& get() const;
+      } const Cp{*gas};
 
-      /// <summary>Represent, in KSP, density of a resource in kg/unit. If null, it is simply not a
-      /// resource handled by KSP and should never cross into managed code.</summary>
-      constexpr std::optional<quantities::Density> const & unitMass() const;
+      struct Cv : properties::ReadOnlyProperty<Entropy, Cv>, properties::ReferencingProperty<MolecularGas> {
+        using properties::ReferencingProperty<MolecularGas>::ReferencingProperty;
+
+      protected:
+        constexpr Entropy const& get() const;
+      } const Cv{*gas};
+
+      struct R : properties::ReadOnlyProperty<SpecificGasConstant, R>,
+                 properties::ReferencingProperty<MolecularGas> {
+        using properties::ReferencingProperty<MolecularGas>::ReferencingProperty;
+
+      protected:
+        constexpr SpecificGasConstant const& get() const;
+      } const R{*gas};
+
+      struct M : properties::ReadOnlyProperty<MolarMass, M>, properties::ReferencingProperty<MolecularGas> {
+        using properties::ReferencingProperty<MolecularGas>::ReferencingProperty;
+
+      protected:
+        constexpr MolarMass const& get() const;
+      } const M{*gas};
+
+      struct UnitMass : properties::ReadOnlyProperty<std::optional<MolarMass>, UnitMass>,
+                        properties::ReferencingProperty<MolecularGas> {
+        using properties::ReferencingProperty<MolecularGas>::ReferencingProperty;
+
+      protected:
+        constexpr std::optional<MolarMass> const& get() const;
+      } const unitMass{*gas};
 
 #pragma endregion
-
-    private:
-      std::shared_ptr<MolecularGas> gas;
     };
   }
 }

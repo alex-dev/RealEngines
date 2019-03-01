@@ -18,16 +18,52 @@
     <None Include=".clang-format" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="abstract_readonly_property.hpp">
+    <ClInclude Include="abstract\abstract_property.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="abstract_property.hpp">
+    <ClInclude Include="abstract\owning_property.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="abstract_writeonly_property.hpp">
+    <ClInclude Include="abstract\owning_property.ipp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="abstract_readonly_property.ipp">
+    <ClInclude Include="abstract\readonly_property.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="abstract\readonly_property.ipp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="abstract\referencing_property.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="abstract\referencing_property.ipp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="abstract\writeonly_property.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="abstract\writeonly_property.ipp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="properties.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="abstract\readwrite_property.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="abstract\readwrite_property.ipp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="default_readonly_property.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="default_readonly_property.ipp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="default_readwrite_property.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="default_readwrite_property.ipp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

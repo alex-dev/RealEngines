@@ -73,28 +73,28 @@
     <LinkIncremental>true</LinkIncremental>
     <OutDir>bin\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>obj\$(Configuration)\$(Platform)\</IntDir>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)Quantities;$(ProjectDir)</IncludePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)Properties;$(SolutionDir)Quantities;$(ProjectDir)</IncludePath>
     <ExtensionsToDeleteOnClean>*.ifc;*.cdf;*.cache;*.obj;*.obj.enc;*.ilk;*.ipdb;*.iobj;*.resources;*.tlb;*.tli;*.tlh;*.tmp;*.rsp;*.pgc;*.pgd;*.meta;*.tlog;*.manifest;*.res;*.pch;*.exp;*.idb;*.rep;*.xdc;*.pdb;*_manifest.rc;*.bsc;*.sbr;*.xml;*.metagen;*.bi</ExtensionsToDeleteOnClean>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>bin\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>obj\$(Configuration)\$(Platform)\</IntDir>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)Quantities;$(ProjectDir)</IncludePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)Properties;$(SolutionDir)Quantities;$(ProjectDir)</IncludePath>
     <ExtensionsToDeleteOnClean>*.ifc;*.cdf;*.cache;*.obj;*.obj.enc;*.ilk;*.ipdb;*.iobj;*.resources;*.tlb;*.tli;*.tlh;*.tmp;*.rsp;*.pgc;*.pgd;*.meta;*.tlog;*.manifest;*.res;*.pch;*.exp;*.idb;*.rep;*.xdc;*.pdb;*_manifest.rc;*.bsc;*.sbr;*.xml;*.metagen;*.bi</ExtensionsToDeleteOnClean>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>bin\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>obj\$(Configuration)\$(Platform)\</IntDir>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)Quantities;$(ProjectDir)</IncludePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)Properties;$(SolutionDir)Quantities;$(ProjectDir)</IncludePath>
     <ExtensionsToDeleteOnClean>*.ifc;*.cdf;*.cache;*.obj;*.obj.enc;*.ilk;*.ipdb;*.iobj;*.resources;*.tlb;*.tli;*.tlh;*.tmp;*.rsp;*.pgc;*.pgd;*.meta;*.tlog;*.manifest;*.res;*.pch;*.exp;*.idb;*.rep;*.xdc;*.pdb;*_manifest.rc;*.bsc;*.sbr;*.xml;*.metagen;*.bi</ExtensionsToDeleteOnClean>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>bin\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>obj\$(Configuration)\$(Platform)\</IntDir>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)Quantities;$(ProjectDir)</IncludePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)Properties;$(SolutionDir)Quantities;$(ProjectDir)</IncludePath>
     <ExtensionsToDeleteOnClean>*.ifc;*.cdf;*.cache;*.obj;*.obj.enc;*.ilk;*.ipdb;*.iobj;*.resources;*.tlb;*.tli;*.tlh;*.tmp;*.rsp;*.pgc;*.pgd;*.meta;*.tlog;*.manifest;*.res;*.pch;*.exp;*.idb;*.rep;*.xdc;*.pdb;*_manifest.rc;*.bsc;*.sbr;*.xml;*.metagen;*.bi</ExtensionsToDeleteOnClean>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -117,8 +117,10 @@
       <IntrinsicFunctions>false</IntrinsicFunctions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <SmallerTypeCheck>false</SmallerTypeCheck>
-      <FloatingPointExceptions>true</FloatingPointExceptions>
-      <DisableLanguageExtensions>true</DisableLanguageExtensions>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <DisableLanguageExtensions>false</DisableLanguageExtensions>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnforceTypeConversionRules>true</EnforceTypeConversionRules>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -145,8 +147,10 @@
       <IntrinsicFunctions>false</IntrinsicFunctions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <SmallerTypeCheck>false</SmallerTypeCheck>
-      <FloatingPointExceptions>true</FloatingPointExceptions>
-      <DisableLanguageExtensions>true</DisableLanguageExtensions>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <DisableLanguageExtensions>false</DisableLanguageExtensions>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnforceTypeConversionRules>true</EnforceTypeConversionRules>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -165,7 +169,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <EnableModules>false</EnableModules>
-      <EnableParallelCodeGeneration>false</EnableParallelCodeGeneration>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <CallingConvention>Cdecl</CallingConvention>
@@ -174,7 +178,9 @@
       <AdditionalOptions>/wd4624 %(AdditionalOptions)</AdditionalOptions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FloatingPointExceptions>false</FloatingPointExceptions>
-      <DisableLanguageExtensions>true</DisableLanguageExtensions>
+      <DisableLanguageExtensions>false</DisableLanguageExtensions>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnforceTypeConversionRules>true</EnforceTypeConversionRules>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -195,7 +201,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <EnableModules>false</EnableModules>
-      <EnableParallelCodeGeneration>false</EnableParallelCodeGeneration>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <CallingConvention>Cdecl</CallingConvention>
@@ -204,7 +210,9 @@
       <AdditionalOptions>/wd4624 %(AdditionalOptions)</AdditionalOptions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FloatingPointExceptions>false</FloatingPointExceptions>
-      <DisableLanguageExtensions>true</DisableLanguageExtensions>
+      <DisableLanguageExtensions>false</DisableLanguageExtensions>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnforceTypeConversionRules>true</EnforceTypeConversionRules>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -220,11 +228,16 @@
     <ClInclude Include="thermodynamics\gas.hpp" />
     <ClInclude Include="thermodynamics\mixture.hpp" />
     <ClInclude Include="thermodynamics\molecular_gas.hpp" />
+    <ClInclude Include="thermodynamics\quantities.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Quantities\Quantities.vcxproj">
       <Project>{a79cc0fa-2e50-4017-a12c-6fc15604653b}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="thermodynamics\gas.cpp" />
+    <ClCompile Include="thermodynamics\molecular_gas.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

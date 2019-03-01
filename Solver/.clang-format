@@ -14,30 +14,32 @@ BreakConstructorInitializers: BeforeColon
 BreakStringLiterals: false
 ColumnLimit: 100
 CompactNamespaces: false
-ConstructorInitializerAllOnOneLineOrOnePerLine: true
+ConstructorInitializerAllOnOneLineOrOnePerLine: false
 Cpp11BracedListStyle: true
 FixNamespaceComments: false
 IncludeBlocks: Merge
 IncludeCategories:
+  - Regex: '(_property|^<properties).hpp>$'
+    Priority: 5
   - Regex: '\.h>$'
     Priority: 1
-  - Regex: 'c.*>$'
-    Priority: 2
-  - Regex: '.*stream>$'
-    Priority: 3
-  - Regex: '^(<|"(gtest|gmock|isl|json)/)'
-    Priority: 4
   - Regex: '\.hpp>$'
-    Priority: 5
-  - Regex: '"$'
     Priority: 6
+  - Regex: '^<c'
+    Priority: 2
+  - Regex: '^(<|")(gtest|gmock|isl|json)/'
+    Priority: 4
+  - Regex: '^<'
+    Priority: 3
+  - Regex: '^"'
+    Priority: 7
 IndentPPDirectives: None
 IndentWidth: 2
 IndentWrappedFunctionNames: true
 KeepEmptyLinesAtTheStartOfBlocks: false
 MaxEmptyLinesToKeep: 1
 NamespaceIndentation: All
-PointerAlignment: Middle
+PointerAlignment: Left
 ReflowComments: true
 SortIncludes: true
 SortUsingDeclarations: true

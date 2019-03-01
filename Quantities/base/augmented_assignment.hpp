@@ -4,14 +4,14 @@
 namespace base {
   template<typename Child>
   struct simple_augmented_assignment {
-    constexpr Child & operator++();
-    constexpr Child & operator--();
+    constexpr Child& operator++();
+    constexpr Child& operator--();
 
     constexpr Child operator++(int);
     constexpr Child operator--(int);
 
-    constexpr Child & operator+=(Child const & other);
-    constexpr Child & operator-=(Child const & other);
+    constexpr Child& operator+=(Child const& other);
+    constexpr Child& operator-=(Child const& other);
   };
 
   template<typename Child, typename Numeric>
@@ -20,8 +20,8 @@ namespace base {
                                      std::is_convertible<Numeric, unsigned long long>>,
                   "Numeric must be implicitly convertible to an arithmetic type.");
 
-    constexpr Child & operator*=(Numeric const & other);
-    constexpr Child & operator/=(Numeric const & other);
+    constexpr Child& operator*=(Numeric const& other);
+    constexpr Child& operator/=(Numeric const& other);
   };
 }
 

@@ -22,7 +22,7 @@ namespace quantities {
 
       constexpr MagneticFluxDensity Gauss = 1e-4 * Tesla;
       constexpr MagneticFlux Maxwell = Gauss * pow<2>(Centi(Metre));
-      constexpr MagneticField Œrsted = 1e3 / (4 * π * Steradian) * Ampere / Metre;
+      constexpr MagneticField Œrsted = 1e3 / (4 * numerics::π * Steradian) * Ampere / Metre;
 
       constexpr SpectroscopicWavenumber Kayser = 1 / Centi(Metre);
     }

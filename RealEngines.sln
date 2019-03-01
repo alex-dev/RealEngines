@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Quantities", "Quantities\Quantities.vcxproj", "{A79CC0FA-2E50-4017-A12C-6FC15604653B}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Solver", "Solver\Solver.vcxproj", "{07A34DAB-078B-4E30-A365-32D2DB07AD3C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D618D9EC-0E8B-4AFB-A5A2-A33134A438B9} = {D618D9EC-0E8B-4AFB-A5A2-A33134A438B9}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Properties", "Properties\Properties.vcxproj", "{D618D9EC-0E8B-4AFB-A5A2-A33134A438B9}"
 EndProject
