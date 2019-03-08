@@ -114,7 +114,7 @@
       <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
       <TreatWarningAsError>true</TreatWarningAsError>
       <AdditionalOptions>/wd4624 %(AdditionalOptions)</AdditionalOptions>
-      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <SmallerTypeCheck>false</SmallerTypeCheck>
       <FloatingPointExceptions>false</FloatingPointExceptions>
@@ -144,7 +144,7 @@
       <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
       <TreatWarningAsError>true</TreatWarningAsError>
       <AdditionalOptions>/wd4624 %(AdditionalOptions)</AdditionalOptions>
-      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <SmallerTypeCheck>false</SmallerTypeCheck>
       <FloatingPointExceptions>false</FloatingPointExceptions>
@@ -231,6 +231,12 @@
     <ClInclude Include="thermodynamics\quantities.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Numerics\Numerics.vcxproj">
+      <Project>{52f7cdf3-dab1-464a-8f13-51fbdb7d3414}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Properties\Properties.vcxproj">
+      <Project>{d618d9ec-0e8b-4afb-a5a2-a33134a438b9}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\Quantities\Quantities.vcxproj">
       <Project>{a79cc0fa-2e50-4017-a12c-6fc15604653b}</Project>
     </ProjectReference>

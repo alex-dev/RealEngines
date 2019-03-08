@@ -225,12 +225,12 @@
   <ItemGroup>
     <ClInclude Include="base\advanced_augmented_assignment.ipp" />
     <ClInclude Include="base\augmented_assignment.hpp" />
-	<ClInclude Include="base\not_constructible.hpp" />
+    <ClInclude Include="base\not_constructible.hpp" />
     <ClInclude Include="base\simple_augmented_assignment.ipp" />
     <ClInclude Include="quantities\dimensions\generators_dimensions.hpp" />
     <ClInclude Include="quantities\dimensions\dimensions.hpp" />
     <ClInclude Include="quantities\dimensions\traits.hpp" />
-	<ClInclude Include="quantities.hpp" />
+    <ClInclude Include="quantities.hpp" />
     <ClInclude Include="quantities\math.hpp" />
     <ClInclude Include="quantities\named_quantities.hpp" />
     <ClInclude Include="quantities\quantities\elementary_functions.ipp" />
@@ -246,7 +246,7 @@
     <ClInclude Include="quantities\units.hpp" />
     <ClInclude Include="quantities\units\astronomy.hpp" />
     <ClInclude Include="quantities\units\bipm.hpp" />
-	<ClInclude Include="quantities\units\cgs.hpp" />
+    <ClInclude Include="quantities\units\cgs.hpp" />
     <ClInclude Include="quantities\units\constants.hpp" />
     <ClInclude Include="quantities\units\prefixes.hpp" />
     <ClInclude Include="quantities\units\prefixes.ipp" />
@@ -255,6 +255,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include=".clang-format" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Numerics\Numerics.vcxproj">
+      <Project>{52f7cdf3-dab1-464a-8f13-51fbdb7d3414}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />

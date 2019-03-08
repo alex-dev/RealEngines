@@ -19,14 +19,16 @@ Cpp11BracedListStyle: true
 FixNamespaceComments: false
 IncludeBlocks: Merge
 IncludeCategories:
+  - Regex: '^(<|")(CppUnitTest|gtest|gmock|isl|json)'
+    Priority: 4
   - Regex: '\.h>$'
     Priority: 1
   - Regex: '\.hpp>$'
     Priority: 5
+  - Regex: '^<chrono'
+    Priority: 3
   - Regex: '^<c'
     Priority: 2
-  - Regex: '^(<|"(gtest|gmock|isl|json)/)'
-    Priority: 4
   - Regex: '^<'
     Priority: 3
   - Regex: '^"'
@@ -44,7 +46,7 @@ SortUsingDeclarations: true
 SpaceAfterCStyleCast: false
 SpaceAfterTemplateKeyword: false
 SpaceBeforeAssignmentOperators: true
-SpaceBeforeParens: Never
+SpaceBeforeParens: ControlStatements
 SpacesBeforeTrailingComments: 1
 SpacesInAngles: false
 SpacesInCStyleCastParentheses: false
